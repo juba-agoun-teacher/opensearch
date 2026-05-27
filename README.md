@@ -90,7 +90,7 @@ $env:PATH = "$env:JAVA_HOME\bin;$env:PATH"
 5. Exécutez le script batch depuis le dossier ``opensearch-3.0.0\bin``:  
 
    ```cmd
-   .\opensearch-windows-install.bat
+   .\opensearch.bat
    ```
 
 ##### Vérification du bon fonctionnement  
