@@ -227,7 +227,18 @@ Il existe deux méthodes pour exécuter OpenSearch Dashboards :
    ```cmd
    cd \chemin\vers\opensearch-dashboards-1.3.20
    ```
-3. *(Optionnel)* Modifiez les paramètres dans `config\opensearch_dashboards.yml`.
+3. Modifiez les paramètres dans `config\opensearch_dashboards.yml`. Mettre tout le code de la fin du fichier en commentaire et coller par ce qui suit : 
+
+   ```sh
+   opensearch.hosts: [http://localhost:9200]
+   opensearch.ssl.verificationMode: none
+   opensearch.username: admin
+   opensearch.password: admin
+   opensearch.requestHeadersWhitelist: [authorization, securitytenant]
+
+   opensearch_security.enabled: false
+   ```
+
 4. Exécutez le script :
    ```cmd
    .\bin\opensearch-dashboards.bat
@@ -258,17 +269,3 @@ Il existe deux méthodes pour exécuter OpenSearch Dashboards :
 
 
 
-Modif dans la config de dashaboard
-
-```sh
-
-
-opensearch.hosts: [http://localhost:9200]
-opensearch.ssl.verificationMode: none
-opensearch.username: admin
-opensearch.password: admin
-opensearch.requestHeadersWhitelist: [authorization, securitytenant]
-
-opensearch_security.enabled: false
-
-```
